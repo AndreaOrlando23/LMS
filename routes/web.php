@@ -18,5 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/books', function () {
-    return view('books');
+     // get data from a database
+  $books = [
+    ['author' => 'eleonora', 'title' => 'mamma'],
+    ['author' => 'andrea', 'title' => 'babba'],
+    ['author' => 'luce', 'title' => 'cice']
+  ];
+  return view('books', ['books' => $books]);
 });
