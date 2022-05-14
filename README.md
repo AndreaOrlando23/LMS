@@ -11,8 +11,8 @@
 
 
 ## Tables:
--	LIBRARIANS
--	CUSTOMER
+-	USERS
+-	CUSTOMERS
 -	BOOKS
 -	ORDERS
 
@@ -20,9 +20,9 @@
 -	CONTROLLER
 
 ---
-**LIBRARIANS**
+**USERS**
 
-    ID_LIBRARIANS char(8), auto_increment
+    ID char(8), auto_increment
     USERNAME varchar(15), not null
 	PASSWORD varchar(8), not null
 	EMAIL varchar(60), not null
@@ -32,7 +32,7 @@ This table stores information about libriarians profile that use the library man
 ---
 **CUSTOMERS**
 
-    ID_CUSTOMER char(8), auto_increment, not null
+    ID char(8), auto_increment, not null
 	NAME varchar(50), not null
 	SURNAME varchar(50), not null
 	CUST_EMAIL varchar(60), not null
@@ -45,7 +45,7 @@ This table stores information about customers profile registered into the system
 ---
 **BOOKS**
 
-    ID_BOOK char(8), auto_increment, not null
+    ID char(8), auto_increment, not null
 	TITLE varchar(250), not null
 	AUTHOR varchar(100), not null
 	CATEGORY varchar(35), not null
@@ -53,7 +53,7 @@ This table stores information about customers profile registered into the system
 	LOCATION char(15), not null
 	LAST_ID_ORDER char(15), null
 	R_ID_CUSTOMER char(8), null
-	R_CUST_EMAIL varchar(60), null
+	R_CUSTOMER_EMAIL varchar(60), null
 	LAST_ORDER_DATE datetime(23), null
 	LAST_RETURN_DATE datetime(23), null
 	AVAILABILITY bool, not null
@@ -71,8 +71,8 @@ else:
 
 Foreign Keys:
 -	LAST_ID_ORDER one optional to many from ORDERS table (take only the last record registered)
--	R_ID_CUSTOMER one optional to many from ORDERS table
--	R_CUST_EMAIL one optional to many from ORDERS table
+-	R_CUSTOMER_ID one optional to many from ORDERS table
+-	R_CUSTOMER_EMAIL one optional to many from ORDERS table
 -	LAST_ORDER_DATE one optional to many from ORDERS table (take only the last record registered)
 -	LAST_RETURN_DATE one optional to many from ORDERS table (take only the last record registered)
     
@@ -83,13 +83,13 @@ Foreign Keys:
 	ID_ORDER char(15), auto_increment, not null
 	ORDER_DATE datetime(23), not null
 	RETURN_DATE datetime(23), null
-	R_ID_BOOK char(8), not null
+	R_BOOK_ID char(8), not null
 	R_TITLE varchar(50), not null
 	R_CATEGORY varchar(35), not null
-	R_ID_CUSTOMER char(8), not null
-	R_CUST_EMAIL varchar(60), not null
+	R_CUSTOMER_ID char(8), not null
+	R_CUSTOMER_EMAIL varchar(60), not null
 	R_PHONE varchar(15), not null
-	R_ID_LIBRARIANS char(8), not null
+	R_USER_ID char(8), not null
 
 This table store information about the orders placed from the order form. Take information from different tables.
 
@@ -99,15 +99,15 @@ Foreign keys:
 -	R_CATEGORY many optional to one from BOOKS table
 -	R_ID_CUSTOMER one to one from CUSTOMERS table
 -	R_PHONE one to one from CUSTOMERS table
--	R_ID_LIBRARIANS one to one from LIBRARIANS table
+-	R_USER_ID one to one from LIBRARIANS table
 
 ---
 **CONTROLLER**
 
-	R_ID_BOOK char(8), not null
+	R_BOOK_ID char(8), not null
 	R_LAST_ID_ORDER char(15), not null
-	R_ID_CUSTOMER char(8), not null
-	R_CUST_EMAIL varchar(60), not null
+	R_CUSTOMER_ID char(8), not null
+	R_CUSTOMER_EMAIL varchar(60), not null
 	R_LAST_ORDER_DATE datetime(23), not null
 	LAST_RETURN_DATE datetime(23), not null
 	

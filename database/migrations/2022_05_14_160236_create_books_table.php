@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
-            $table->string('author');
-            $table->string('category');
-            $table->string('edition');
-            $table->string('location');
+            $table->string('author', 100);
+            $table->string('category', 35);
+            $table->string('edition', 35);
+            $table->string('location', 15);
             // add foreign keys here
         });
     }
