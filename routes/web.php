@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,19 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/books', function () {
-     // get data from a database
-  $books = [
-    ['author' => 'eleonora', 'title' => 'mamma'],
-    ['author' => 'andrea', 'title' => 'babba'],
-    ['author' => 'luce', 'title' => 'cice']
-  ];
-  return view('books', ['books' => $books]);
-});
-
-
 Route::get('/dashboard', function () {
+  return view('dashboard');
+  });
 
-return view('dashboard');
-});
+Route::get('/books', [BookController::class, 'index']);
+Route::get('/books/{id}', [BookController::class, 'show']);

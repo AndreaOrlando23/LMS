@@ -30,7 +30,7 @@
 This table stores information about libriarians profile that use the library management system.
 
 ---
-**CUSTOMER**
+**CUSTOMERS**
 
     ID_CUSTOMER char(8), auto_increment, not null
 	NAME varchar(50), not null
@@ -94,11 +94,11 @@ Foreign Keys:
 This table store information about the orders placed from the order form. Take information from different tables.
 
 Foreign keys:
--	R_ID_BOOK many optional to one from BOOK table
--	R_TITLE many optional to one from BOOK table
--	R_CATEGORY many optional to one from BOOK table
--	R_ID_CUSTOMER one to one from CUSTOMER table
--	R_PHONE one to one from CUSTOMER table
+-	R_ID_BOOK many optional to one from BOOKS table
+-	R_TITLE many optional to one from BOOKS table
+-	R_CATEGORY many optional to one from BOOKS table
+-	R_ID_CUSTOMER one to one from CUSTOMERS table
+-	R_PHONE one to one from CUSTOMERS table
 -	R_ID_LIBRARIANS one to one from LIBRARIANS table
 
 ---
