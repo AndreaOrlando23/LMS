@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/books', function () {
      // get data from a database
   $books = [
@@ -25,4 +26,10 @@ Route::get('/books', function () {
     ['author' => 'luce', 'title' => 'cice']
   ];
   return view('books', ['books' => $books]);
+});
+
+
+Route::get('/dashboard', function () {
+
+return view('dashboard');
 });
