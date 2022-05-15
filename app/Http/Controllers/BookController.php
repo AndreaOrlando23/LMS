@@ -25,5 +25,21 @@ class BookController extends Controller
         return view('books.create');
     }
 
+    public function store() {
+        $book = new Book();
+        $book->title = request('title');
+        $book->author = request('author');
+        $book->category = request('category');
+        $book->edition = request('edition');
+        $book->location = request('location');
+        $book->save();
+        return redirect('/books/create')->with('mssg', 'Book registered');
+    }
+
+    public function destroy($id) {
+        $book = Book::findOrFail($id);
+        $book->delete();
+        return redirect('/books');
+    }
 
 }

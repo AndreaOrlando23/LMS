@@ -18,7 +18,7 @@
 
     <div class="content">
         <img src="/img/LMS-logo.jpg" alt="LMS logo">
-        <div class="title m-b-md">
+        <div class="titles m-b-md">
             Library Management System
         </div>
     </div>

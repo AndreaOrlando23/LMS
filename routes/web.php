@@ -26,7 +26,13 @@ Route::get('/dashboard', function () {
 
 Route::get('/books', [BookController::class, 'index']);
 Route::get('/books/create', [BookController::class, 'create']);
+Route::post('/books', [BookController::class, 'store']);
 Route::get('/books/{id}', [BookController::class, 'show']);
+Route::delete('/books/{id}', [BookController::class, 'destroy']);
+
 
 Route::get('/customers', [CustomerController::class, 'index']);
+Route::get('/customers/create', [CustomerController::class, 'create']);
+Route::post('/customers', [CustomerController::class, 'store']);
 Route::get('/customers/{id}', [CustomerController::class, 'show']);
+Route::delete('/customers/{id}', [CustomerController::class, 'destroy']);
