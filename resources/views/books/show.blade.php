@@ -3,7 +3,7 @@
 @section('content')
 <div class="wrapper book-details">
     <h1>Book code: {{ $book->id }}</h1>
-    <p class="titles">{{ $book->title }}</p>
+    <p class="title">Title: {{ $book->title }}</p>
     <p class="author">Author: {{ $book->author }}</p>
     <p class="category">Category: {{ $book->category }}</p>
     <p class="edition">Edition: {{ $book->edition }}</p>

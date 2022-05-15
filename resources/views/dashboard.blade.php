@@ -3,7 +3,7 @@
 @section('content')
 <div class="flex-center position-ref full-height">
     <div class="content">
-        <div class="title m-b-md">
+        <div class="titles m-b-md">
             Admin Dashboard
             <p>Books | Orders | Customer | Controller</p>
         </div>
