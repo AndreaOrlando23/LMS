@@ -89,9 +89,11 @@ p {
 }
 
 button {
-    background: #636b6f;
+    background: #cfd2d3;
     padding: 8px 20px;
-    color: #fff;
+    /* color: #fff; */
+    font-weight: bold;
+    color: green;
     border: 0;
     /* margin-top: 20px; */
 }
@@ -124,7 +126,20 @@ h4 {
 }
 
 a {
-    /* color: #636b6f; */
+    color: green;
     text-decoration: none !important;
     font-weight: bold;
+}
+
+a:visited {
+    color: green;
+  }
+
+
+table, th, td {
+    border: 1px solid;
+  }
+
+table {
+    width: 100%;
 }

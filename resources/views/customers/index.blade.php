@@ -1,14 +1,22 @@
-@extends('layouts.layout')
-
+@extends('layouts.app')
 @section('content')
-<div class="wrapper customer-index">
-  <h1>Customers List</h1>
-  <button><a href="/customers/create">Register a customer</a></button>
-  @foreach($customers as $customer)
-  <div class="customers-item">
-    <h4><a href="/customers/{{ $customer->id }}">{{ $customer->id }} - {{ $customer->name }} - {{ $customer->surname }} - {{ $customer->email }}</a></h4>
-  </div>
-  @endforeach
-</div>
+<h1>Customers List</h1>
+<button><a href="/customers/create">Register a new customer</a></button>
+<table>
+   <tr>
+       <th>#</th>
+       <th>Name</th>
+       <th>Surname</th>
+       <th>Email</th>
+   </tr>
+   @foreach ($customers as $customer)
+      <tr>
+         <td><a href="/customers/{{ $customer->id }}"> {{$customer->id}}</td>
+         <td>{{$customer->name}}</td>
+         <td>{{$customer->surname}}</td>
+         <td>{{$customer->email}}</td>
+         </tr>
+   @endforeach
+</table>
 <a href="/dashboard" class="back"><- Back to dashboard</a>
 @endsection
