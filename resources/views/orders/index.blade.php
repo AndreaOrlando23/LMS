@@ -16,12 +16,10 @@
          <td><a class="table" href="/orders/{{ $order->id }}">{{$order->id}}</td>
          <td>{{$order->order_date}}</td>
          <td>{{$order->return_date}}</td>
-         <td>{{$order->book_id}}</td>
-         <td>{{$order->customer_id}}</td>
+         <td><a class="table" href="/books/{{ $order->book_id }}">{{$order->book_id}}</td>
+         <td><a class="table" href="/customers/{{ $order->customer_id }}">{{$order->customer_id}}</td>
          </tr>
     @endforeach
 </table>
 <a href="/dashboard" class="back"><- Back to dashboard</a>
 @endsection
-
-

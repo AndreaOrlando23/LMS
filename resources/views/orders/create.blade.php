@@ -17,5 +17,5 @@
     </form>
     <p class="mssg">{{ session('mssg') }}</p>
 </div>
-<a href="/orders" class="back"><- Back to all books</a>
+<a href="/orders" class="back"><- Back to all orders</a>
 @endsection
