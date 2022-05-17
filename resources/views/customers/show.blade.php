@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="wrapper book-details">
+<div class="wrapper customer-details">
     <h1>Customer code: {{ $customer->id }}</h1>
     <p class="name">Name: {{ $customer->name }}</p>
     <p class="Surname">Surname: {{ $customer->surname }}</p>

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\OrderController;
+
 
 
 /*
@@ -38,6 +40,13 @@ Route::get('/customers/create', [CustomerController::class, 'create']);
 Route::post('/customers', [CustomerController::class, 'store']);
 Route::get('/customers/{id}', [CustomerController::class, 'show']);
 Route::delete('/customers/{id}', [CustomerController::class, 'destroy']);
+
+
+Route::get('/orders', [OrderController::class, 'index']);
+Route::get('/orders/create', [OrderController::class, 'create']);
+Route::post('/orders', [OrderController::class, 'store']);
+Route::get('/orders/{id}', [OrderController::class, 'show']);
+Route::delete('/orders/{id}', [OrderController::class, 'destroy']);
 
 
 Auth::routes([

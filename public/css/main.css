@@ -6,22 +6,27 @@ html, body {
     height: 100vh;
     margin: 0;
 }
+
 .full-height {
     height: 100vh;
 }
+
 .flex-center {
     align-items: center;
     display: flex;
     justify-content: center;
 }
+
 .position-ref {
     position: relative;
 }
+
 .top-right {
     position: absolute;
     right: 10px;
     top: 18px;
 }
+
 .content {
     text-align: center;
 }
@@ -38,6 +43,7 @@ html, body {
 .m-b-md {
     margin-bottom: 30px;
 }
+
 footer{
   background: #eee;
   padding: 20px;
@@ -52,7 +58,7 @@ footer{
 
 
 /* create book form */
-.create-book{
+.create-book, .create-customer, .create-order {
     background: #f7f7f7;
     padding: 20px;
 }
@@ -74,11 +80,9 @@ input[type=submit]{
     border: 0;
     margin-top: 20px;
 }
-  
 
-  
-/* book details page */
-.book-details {
+
+.book-details, .customer-details, .order-details {
     background: #f7f7f7;
     padding: 20px;
 }
@@ -91,11 +95,9 @@ p {
 button {
     background: #cfd2d3;
     padding: 8px 20px;
-    /* color: #fff; */
     font-weight: bold;
     color: green;
     border: 0;
-    /* margin-top: 20px; */
 }
 
 a.back{
@@ -105,24 +107,6 @@ margin-top: 30px;
 color: #636b6f;
 margin-bottom: 20px;
 font-weight: bold;
-}
-  
-  
-/* book index page .book-index{} */  
-h1 {
-    margin-bottom: 40px;
-}
-
-.book-item, .customers-item{
-    margin: 10px 0;
-    padding: 12px;
-    background: #f4f4f4;
-}
-
-h4 {
-    display: inline-block;
-    font-weight: normal;
-    margin-left: 20px;
 }
 
 a {
@@ -134,11 +118,28 @@ a {
 a:visited {
     color: green;
   }
+  
+  
+/* book index page .book-index{} */  
+h1 {
+    margin-bottom: 40px;
+}
 
+/* .book-item, .customers-item {
+    margin: 10px 0;
+    padding: 12px;
+    background: #f4f4f4;
+} */
+
+h4 {
+    display: inline-block;
+    font-weight: normal;
+    margin-left: 20px;
+}
 
 table, th, td {
     border: 1px solid;
-  }
+}
 
 table {
     width: 100%;

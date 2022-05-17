@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->date('order date')->nullable();
-            $table->date('return date')->nullable();
-            $table->bigInteger('r_book_id')->unsigned();
-            $table->foreign('r_book_id')->references('id')->on('books');
-            $table->bigInteger('r_customer_id')->unsigned();
-            $table->foreign('r_customer_id')->references('id')->on('customers');
+            $table->date('order_date')->nullable();
+            $table->date('return_date')->nullable();
+            $table->bigInteger('book_id')->unsigned();
+            $table->foreign('book_id')->references('id')->on('books');
+            $table->bigInteger('customer_id')->unsigned();
+            $table->foreign('customer_id')->references('id')->on('customers');
         });
     }
 
