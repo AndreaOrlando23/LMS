@@ -6,7 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Book;
 
 class BookController extends Controller
-{
+{   
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function index() {
         $books = Book::all();
         // $books = Book::orderBy('name', 'desc')->get();

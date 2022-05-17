@@ -20,9 +20,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::get('/dashboard', function () {
   return view('dashboard');
-  });
+  })->middleware('auth');
+
 
 Route::get('/books', [BookController::class, 'index']);
 Route::get('/books/create', [BookController::class, 'create']);
@@ -38,5 +40,9 @@ Route::get('/customers/{id}', [CustomerController::class, 'show']);
 Route::delete('/customers/{id}', [CustomerController::class, 'destroy']);
 
 
-Auth::routes();
+Auth::routes([
+  'register' => false
+]);
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
