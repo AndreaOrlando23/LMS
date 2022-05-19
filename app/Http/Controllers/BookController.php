@@ -47,4 +47,20 @@ class BookController extends Controller
         return redirect('/books');
     }
 
+    public function edit($book) {
+        return view('books.edit');
+    }
+
+    public function update(Request $request, $book) {
+        $input = $request->all();
+        $book = Book::find($book);
+        $book->title = $input('title');
+        $book->author = $input('author');
+        $book->category = $input('category');
+        $book->edition = $input('edition');
+        $book->location = $input('location');
+        $book->save();
+        return redirect('/books/create')->with('mssg', 'Book registered');
+    }
+
 }

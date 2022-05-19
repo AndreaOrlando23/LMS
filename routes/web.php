@@ -33,6 +33,9 @@ Route::get('/books/create', [BookController::class, 'create']);
 Route::post('/books', [BookController::class, 'store']);
 Route::get('/books/{id}', [BookController::class, 'show']);
 Route::delete('/books/{id}', [BookController::class, 'destroy']);
+Route::get('/edit-books/{id}', [BookController::class, 'edit']);
+Route::put('/edit-books/{id}', [BookController::class, 'update']);
+
 
 
 Route::get('/customers', [CustomerController::class, 'index']);

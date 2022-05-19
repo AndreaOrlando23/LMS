@@ -73,7 +73,9 @@ select{
     width: 180px;
 }
 
-input[type=submit]{
+input[type=submit] {
+    font-family: 'Nunito';
+    font-weight: bold;
     background: #636b6f;
     padding: 8px 20px;
     color: #fff;
@@ -93,11 +95,22 @@ p {
 }
 
 button {
+    font-family: 'Nunito';
     background: #cfd2d3;
     padding: 8px 20px;
     font-weight: bold;
     color: green;
     border: 0;
+}
+
+.edit {
+    font-family: 'Nunito';
+    background: green;
+    padding: 8px 20px;
+    font-weight: bold;
+    color: white;
+    border: 0;
+    width: 100%;
 }
 
 a.back{

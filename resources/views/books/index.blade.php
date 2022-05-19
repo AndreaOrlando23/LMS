@@ -8,12 +8,14 @@
        <th>#</th>
        <th>Title</th>
        <th>Location</th>
+       <th>Action</th>
    </tr>
    @foreach ($books as $book)
       <tr>
          <td><a class="table" href="/books/{{ $book->id }}">{{$book->id}}</td>
          <td>{{$book->title}}</td>
          <td>{{$book->location}}</td>
+         <td><a href="{{url('edit-books/'.$book->id)}}">EDIT</a></td>
          </tr>
    @endforeach
 </table>
@@ -21,3 +23,4 @@
 @endsection
 
 
+<!-- <button class="edit">EDIT</button> -->
