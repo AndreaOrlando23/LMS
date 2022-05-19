@@ -15,12 +15,9 @@
          <td><a class="table" href="/books/{{ $book->id }}">{{$book->id}}</td>
          <td>{{$book->title}}</td>
          <td>{{$book->location}}</td>
-         <td><a href="{{url('edit-books/'.$book->id)}}">EDIT</a></td>
+         <td><a href="/edit-books/{{ $book->id }}">EDIT</a></td>
          </tr>
    @endforeach
 </table>
 <a href="/dashboard" class="back"><- Back to dashboard</a>
 @endsection
-
-
-<!-- <button class="edit">EDIT</button> -->

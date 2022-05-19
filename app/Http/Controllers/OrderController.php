@@ -40,4 +40,19 @@ class OrderController extends Controller
         $order->delete();
         return redirect('/orders');
     }
+
+    public function edit($id) {
+        $order = Order::findOrFail($id);
+        return view('orders.edit', compact('order'));
+    }
+
+    public function update(Request $request, $id) {
+        $order = Order::findOrFail($id);
+        $order->order_date = $request['order_date'];
+        $order->return_date = $request['return_date'];
+        $order->book_id = $request['book_id'];
+        $order->customer_id = $request['customer_id'];
+        $order->save();
+        return redirect('/orders');
+    }
 }

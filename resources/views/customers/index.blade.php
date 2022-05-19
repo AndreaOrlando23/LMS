@@ -8,6 +8,7 @@
        <th>Name</th>
        <th>Surname</th>
        <th>Email</th>
+       <th>Action</th>
    </tr>
    @foreach ($customers as $customer)
       <tr>
@@ -15,6 +16,7 @@
          <td>{{$customer->name}}</td>
          <td>{{$customer->surname}}</td>
          <td>{{$customer->email}}</td>
+         <td><a href="/edit-customers/{{ $customer->id }}">EDIT</a></td>
          </tr>
    @endforeach
 </table>
