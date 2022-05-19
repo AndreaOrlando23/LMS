@@ -16,7 +16,7 @@
          <td>{{$customer->name}}</td>
          <td>{{$customer->surname}}</td>
          <td>{{$customer->email}}</td>
-         <td><a href="/edit-customers/{{ $customer->id }}">EDIT</a></td>
+         <td class="edit"><a href="/edit-customers/{{ $customer->id }}">EDIT</a></td>
          </tr>
    @endforeach
 </table>

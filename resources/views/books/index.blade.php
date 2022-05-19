@@ -15,7 +15,7 @@
          <td><a class="table" href="/books/{{ $book->id }}">{{$book->id}}</td>
          <td>{{$book->title}}</td>
          <td>{{$book->location}}</td>
-         <td><a href="/edit-books/{{ $book->id }}">EDIT</a></td>
+         <td class="edit"><a href="/edit-books/{{ $book->id }}">EDIT</a></td>
          </tr>
    @endforeach
 </table>

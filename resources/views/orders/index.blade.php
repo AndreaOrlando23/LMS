@@ -19,7 +19,7 @@
          <td>{{$order->return_date}}</td>
          <td><a class="table" href="/books/{{ $order->book_id }}">{{$order->book_id}}</td>
          <td><a class="table" href="/customers/{{ $order->customer_id }}">{{$order->customer_id}}</td>
-         <td><a href="/edit-orders/{{ $order->id }}">EDIT</a></td>
+         <td class="edit"><a href="/edit-orders/{{ $order->id }}">EDIT</a></td>
          </tr>
     @endforeach
 </table>

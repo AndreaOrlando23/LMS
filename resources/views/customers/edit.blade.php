@@ -22,7 +22,7 @@
         </select>
         <label for="course">Course:</label>
         <input type="text" id="course" name="course" value = "{{ old('course') ?? $customer->course }}">
-        <br><input type="submit" value="Edit">
+        <br><input type="submit" value="EDIT">
     </form>
 </div>
 <a href="/customers" class="back"><- Back to all customers</a>

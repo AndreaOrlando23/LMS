@@ -104,13 +104,18 @@ button {
 }
 
 .edit {
-    font-family: 'Nunito';
+    /* font-family: 'Nunito';
     background: green;
     padding: 8px 20px;
     font-weight: bold;
     color: white;
     border: 0;
-    width: 100%;
+    width: 100%; */
+    text-align: center;
+}
+
+td a {
+    text-align: center;
 }
 
 a.back{

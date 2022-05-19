@@ -21,7 +21,7 @@
         <input type="text" id="edition" name="edition" value = "{{ old('edition') ?? $book->edition }}">
         <label for="location">Location:</label>
         <input type="text" id="location" name="location" value = "{{ old('location') ?? $book->location }}">
-        <br><input type="submit" value="Edit">
+        <br><input type="submit" value="EDIT">
     </form>
 </div>
 <a href="/books" class="back"><- Back to all books</a>
