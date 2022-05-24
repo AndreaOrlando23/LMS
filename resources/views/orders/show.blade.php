@@ -7,11 +7,11 @@
     <p class="date">Return date: {{ $order->return_date }}</p>
     <p class="book_id">Book ID: {{ $order->book_id }}</p>
     <p class="customer_id">Customer_ID: {{ $order->customer_id }}</p>
-<form action="/orders/{{ $order->id }}" method="POST">
+<!-- <form action="/orders/{{ $order->id }}" method="POST">
     @csrf
     @method('DELETE')
     <button>Delete Order</button>
-</form>
+</form> -->
 </div>
 <a href="/orders" class="back"><- Back to all orders</a>
 @endsection

@@ -52,7 +52,7 @@ Route::get('/orders', [OrderController::class, 'index']);
 Route::get('/orders/create', [OrderController::class, 'create']);
 Route::post('/orders', [OrderController::class, 'store']);
 Route::get('/orders/{id}', [OrderController::class, 'show']);
-Route::delete('/orders/{id}', [OrderController::class, 'destroy']);
+// Route::delete('/orders/{id}', [OrderController::class, 'destroy']);
 Route::get('/edit-orders/{id}', [OrderController::class, 'edit']);
 Route::put('/edit-orders/{id}', [OrderController::class, 'update']);
 

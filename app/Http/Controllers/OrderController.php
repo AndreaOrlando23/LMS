@@ -35,11 +35,11 @@ class OrderController extends Controller
         return redirect('/orders/create')->with('mssg', 'Order registered');
     }
 
-    public function destroy($id) {
-        $order = Order::findOrFail($id);
-        $order->delete();
-        return redirect('/orders');
-    }
+    // public function destroy($id) {
+    //     $order = Order::findOrFail($id);
+    //     $order->delete();
+    //     return redirect('/orders');
+    // }
 
     public function edit($id) {
         $order = Order::findOrFail($id);
