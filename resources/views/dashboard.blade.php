@@ -5,7 +5,7 @@
     <div class="content">
         <div class="titles m-b-md">
             Admin Dashboard
-            <p><a href="/books">Books</a> | <a href="/orders">Orders</a> | <a href="/customers">Customers</a> | Controller</p>
+            <p>Controller | <a href="/books">Books</a> | <a href="/orders">Orders</a> | <a href="/customers">Customers</a></p>
         </div>
     </div>
 </div>
